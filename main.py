@@ -4,7 +4,6 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any
 from bson import ObjectId
-# from pymongo import MongoClient
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from datetime import datetime
@@ -49,14 +48,6 @@ class ProductCreate(BaseModel):
     name: str
     price: float
     sizes: List[ProductSizes]
-
-class Product(BaseModel):
-    id: str = Field(alias="_id")
-    name: str
-    price: float
-
-    class Config:
-        allow_population_by_field_name = True
 
 class OrderItem(BaseModel):
     productId: str
