@@ -182,10 +182,5 @@ Returns all of user\_4 orders, each with product details and computed total pric
 
 ---
 
-## Notes
-
-* This project assumes a running MongoDB instance. You can use Atlas or run MongoDB locally.
-
----
 
 <div style="text-align: center">⁂</div>
